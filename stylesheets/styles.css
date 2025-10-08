@@ -1,0 +1,69 @@
+body {
+    background-color: #12232c;
+    color: #d7dde2;
+}
+.texto {
+    font-family: "Amiko", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+h1 {
+    color: #d7dde2;
+    font-family: "Biryani", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+} 
+
+h2 {
+    color: #d7dde2;
+     font-family: "Changa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+h4 {
+    font-family: "Amiko", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}       
+a {
+    color: #f5502d;
+
+}
+
+* {
+    /* Familia de fuentes */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    /* Alineación del texto */
+    text-align: center;
+    /* Grosor de la fuente negrita */
+    font-weight: bold;
+}
+
+.subtitle{
+    color: rgb(151 156 165 / 0.89);
+    text-transform: uppercase;
+}
+#photo{
+    width: 8vw;
+    height: auto;
+}
+
+footer p{
+    text-align: right;
+    font-style: italic;
+}
+nav > ul{
+    list-style: none;
+}
+
+section {
+    border: 0.2pt solid #cedddd;
+    margin: 4px 2px 8px 2px;
+    padding: 1.5% 0.8%;
+    margin-bottom: 1.2rem;
+
+}

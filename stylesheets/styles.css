@@ -58,7 +58,14 @@ footer p{
 }
 nav > ul{
     list-style: none;
+    display: flex;
+    justify-content: space-around space-evenly;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:1rem;
 }
+
 
 section {
     border: 0.2pt solid #cedddd;
@@ -66,4 +73,22 @@ section {
     padding: 1.5% 0.8%;
     margin-bottom: 1.2rem;
 
+}
+section > form {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+#ref {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#ref h2 {
+    flex:0 0 100%;
+}
+#ref article {
+    flex:1 1 calc(33.333%-1rem);
 }

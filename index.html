@@ -5,33 +5,66 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
         <title>CV Andrey Arias</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiko&family=Biryani:wght@600&family=Changa&display=swap" rel="stylesheet">
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+          <link rel="stylesheet" href ="stylesheets/styles.css">
+
+    <style> 
+    #mapa { 
+    width: 100%; 
+    height: 580px; 
+    box-shadow: 5px 5px 5px #888; 
+    } 
+    </style>
 </head>
 <body>
+    
         <h1>Curriculum - Andrey Arias</h1><hr>
     <header>
-        <h2>Andrey Alejandro Arias Aucapeña</h2>
+        <h2 class="subtitle">Andrey Alejandro Arias Aucapeña</h2>
         <p>Estudiante | andrauca@espol.edu.ec | 0995190670</p>
     </header><hr>
     <nav>
-        <u>
+        <ul>
             <li><a href= "#Resumen">Resumen</a></li>
             <li><a href= "#Educacion">Educacion</a></li>
             <li><a href= "#HC">Habilidades y Certificaciones</a></li>
             <li><a href= "#Proyectos">Proyectos</a></li>
             <li><a href= "#test">Experencia</a></li>
-        </u>
+            <li><a href="#ref">Referencias</a></li>
+        </ul>
     </nav>
     <main><hr>
         <section id="Resumen">
-            <h2> Resumen</h2>
-            <p> Soy un estudiante de la <i>ESPOL</i>, cursando la carrera de <i>Ciencia de Datos e Inteligencia Artificial</i>.
+            <h2 class="subtitle"> Resumen</h2>
+            <p class="texto"> Soy un estudiante de la <i><a href=https://www.espol.edu.ec/es>ESPOL</a></i>, cursando la carrera de <i>Ciencia de Datos e Inteligencia Artificial</i>.
             Actualmente no cuento con experiencia laboral, pero tengo la motivación para empezar un trabajo.
             Me considero honesto, integro y de mente abierta.</p>
+            <h4>Habilidades blandas</h4>
+            <ul>
+                <li>Resolucion de problemas</li>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación</li>
+            </ul>
+            <h4>Idiomas manejados</h4>
+                <ol>
+                    <li>Español</li>
+                    <li>Ingles</li>
+                    <li>Frances</li>
+                </ol>
+            
         </section><hr>
         <section id="Educacion">
-            <h2>Educacion</h2>
-            <table>
+            <h2 class="subtitle">Educacion</h2>
+            <table align="center">
                 <thead>
                     <tr>
                         <th scope="col">Institucion</th>
@@ -59,8 +92,8 @@
             </table>
         </section><hr>
         <section id ="HC">
-            <h2>Habilidades y certificaciones</h2>
-            <table>
+            <h2 class="subtitle">Habilidades y certificaciones</h2>
+            <table align="center">
                 <thead>
                     <tr>
                         <th scope="col">Habilidad/Certificacion</th>
@@ -116,8 +149,8 @@
             </table>
         </section><hr>
         <section id="Proyectos">
-            <h2>Proyectos</h2>
-            <table>
+            <h2 class="subtitle">Proyectos</h2>
+            <table align="center">
                 <thead>
                     <tr>
                         <th scope="col">Nombre</th>
@@ -139,8 +172,8 @@
             </table>
         </section><hr>
         <section id="test">
-            <h2>Experencia</h2>
-            <table>
+            <h2 class="subtitle">Experiencia</h2>
+            <table align="center">
                 <thead>
                     <tr>
                         <th scope="col">Empresa</th>
@@ -163,7 +196,28 @@
                     </tr>
                 </tfoot>
             </table>
+            
+        </section><hr>
+        <section id="ref">
+            <h2 class="subtitle">Referencias</h2>
+            <article>ref 1</article>
+            <article>ref 2</article>
+            <article>ref 3</article>
         </section>
+        <section>
+            <div id="mapa"></div>
+            <div><img id="photo" src="https://picsum.photos/200/300" alt="placeholder"></div>
+            <div><iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=KSZC3xHi3ed1Whh8&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section><hr>
+        <section>
+<form action="" method="post">
+  <label for="POST-name">Nombre:</label>
+  <input id="POST-name" type="text" name="name" />
+  <input type="submit" value="Save" />
+</form>
+
+        </section>
+
 </main><hr>
 <footer>
     <p>© Andrey Arias - 2025</p>
@@ -173,5 +227,17 @@
         <li><a href="https://github.com/andreyariascdia">GitHub</a></li>
     </ul>
 </footer>
+<script> 
+                    var map = L.map('mapa')
+                    .setView([-2.1854276772994123, -79.88193264103435], 15);
+                    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                    }).addTo(map);
+                    L.control.scale().addTo(map);
+                    L.marker([-2.1854276772994123, -79.88193264103435],{draggable: true}).addTo(map); 
+                    </script>
+                    
 </body>
+
 </html>
